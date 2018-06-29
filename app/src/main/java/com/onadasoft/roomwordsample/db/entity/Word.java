@@ -1,4 +1,4 @@
-package com.onadasoft.roomwordsample.data;
+package com.onadasoft.roomwordsample.db.entity;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
