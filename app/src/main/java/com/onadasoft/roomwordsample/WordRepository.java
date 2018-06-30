@@ -28,7 +28,7 @@ public class WordRepository {
     private LiveData<List<Word>> mAllWords;
 
     // a constructor that gets a handle to the database and initializes the member variables.
-    WordRepository(Application application){
+    public WordRepository(Application application){
         WordRoomDatabase db = WordRoomDatabase.getDatabase(application);
         mWordDao = db.wordDao();
         mAllWords = mWordDao.getAllWords();
@@ -37,7 +37,7 @@ public class WordRepository {
     // Add a wrapper for getAllWords().
     // Room executes all queries on a separate thread.
     // Observed LiveData will notify the observer when the data has changed.
-    LiveData<List<Word>> getmAllWords(){
+    public LiveData<List<Word>> getAllWords(){
         return mAllWords;
     }
 
